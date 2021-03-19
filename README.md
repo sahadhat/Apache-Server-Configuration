@@ -1,6 +1,6 @@
 # Apache-Server-Configuration
 Install Apache
-
+---------------------------------------------------------
 sudo apt update && sudo apt install apache2
 
 Configure Firewall
@@ -52,11 +52,10 @@ a2dissite 000-default.conf
 
 service apache2 restart
 
----------------------------------------------------------
-
+ 
 
 #Renew SSL Useful Commands
-
+---------------------------------------------------------
 sudo apt-get update
 
 
@@ -79,7 +78,7 @@ service apache2 restart
 
 
 #Create Subdomain
-
+---------------------------------------------------------
 sudo apt-get update
 
 sudo mkdir -p /var/www/hi.example.com/public_html
@@ -120,14 +119,14 @@ sudo service apache2 restart
 
 
 #Install ZIP/Unzip
-
+---------------------------------------------------------
 apt-get update
 
 
 apt-get install zip unzip
 
 #Enable .htaacess
-
+---------------------------------------------------------
 sudo apt-get update
 
 
@@ -145,7 +144,7 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf
 </Directory>
 
 #Configure Apache File
-
+---------------------------------------------------------
 sudo nano /etc/apache2/apache2.conf
 
 
@@ -165,7 +164,7 @@ sudo nano /etc/apache2/apache2.conf
  ServerTokens Prod
 
 #install SSL Certificate
-
+---------------------------------------------------------
 sudo apt update && sudo apt install certbot python3-certbot-apache
 
 
