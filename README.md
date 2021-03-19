@@ -17,18 +17,6 @@ sudo ufw enable
 sudo ufw status
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 Host Multiple Website on Droplets/Cloud Server/Any Ubuntu Linux
 
 :::Apache Configurations:::Ubuntu 20.04 LTS :::
@@ -67,7 +55,7 @@ service apache2 restart
 ---------------------------------------------------------
 
 
-Renew SSL Useful Commands
+#Renew SSL Useful Commands
 
 sudo apt-get update
 
@@ -90,21 +78,7 @@ service apache2 restart
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Create Subdomain
+#Create Subdomain
 
 sudo apt-get update
 
@@ -145,14 +119,14 @@ sudo service apache2 restart
 
 
 
-Install ZIP/Unzip
+#Install ZIP/Unzip
 
 apt-get update
 
 
 apt-get install zip unzip
 
-Enable .htaacess
+#Enable .htaacess
 
 sudo apt-get update
 
@@ -170,7 +144,7 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf
   AllowOverride All
 </Directory>
 
-Configure Apache File
+#Configure Apache File
 
 sudo nano /etc/apache2/apache2.conf
 
@@ -190,7 +164,7 @@ sudo nano /etc/apache2/apache2.conf
  ServerSignature Off
  ServerTokens Prod
 
-install SSL Certificate
+#install SSL Certificate
 
 sudo apt update && sudo apt install certbot python3-certbot-apache
 
