@@ -43,20 +43,17 @@ ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-<Code Start>
-
-<VirtualHost *:80>
-	
-    ServerAdmin root@example.com
-    ServerName example.com
-    ServerAlias www.example.com
-    DocumentRoot /var/www/html/example.com/public_html
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-
+<Code>
+	<VirtualHost *:80>
+ServerAdmin root@example.com
+ServerName example.com
+ServerAlias www.example.com
+DocumentRoot /var/www/html/example.com/public_html
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-</Code Close>
+</Code>
 
 sudo a2ensite example.com.conf
 
@@ -112,8 +109,7 @@ sudo nano /etc/apache2/sites-available/hi.example.com.conf
         ServerAdmin info@example.com
         ServerName hi.example.com
         DocumentRoot /var/www/hi.example.com/public_html
-
-        <Directory /var/www/hi.example.com/public_html/>
+           <Directory /var/www/hi.example.com/public_html/>
             Options Indexes FollowSymLinks
             AllowOverride All
             Require all granted
@@ -123,6 +119,25 @@ sudo nano /etc/apache2/sites-available/hi.example.com.conf
         CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 </VirtualHost>
+
+
+```
+<VirtualHost *:80>
+        ServerAdmin info@example.com
+        ServerName hi.example.com
+        DocumentRoot /var/www/hi.example.com/public_html
+           <Directory /var/www/hi.example.com/public_html/>
+            Options Indexes FollowSymLinks
+            AllowOverride All
+            Require all granted
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
+
+```
 
 
 sudo a2ensite hi.example.com.conf
