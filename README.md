@@ -18,7 +18,7 @@ sudo ufw status
 
 
 Host Multiple Website on Droplets/Cloud Server/Any Ubuntu Linux
-
+---------------------------------------------------------
 :::Apache Configurations:::Ubuntu 20.04 LTS :::
 
 Note : Change example.com with your own domain name.
@@ -43,6 +43,17 @@ ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
+
+<VirtualHost *:80>
+	
+    ServerAdmin root@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/html/example.com/public_html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+</VirtualHost>
 
 sudo a2ensite example.com.conf
 
