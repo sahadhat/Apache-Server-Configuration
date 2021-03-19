@@ -59,7 +59,7 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
 `sudo apt-get update`
 
 
-`sudo apachectl stop`
+`sudo apachect2 stop`
 
 **Without WWW**
 
