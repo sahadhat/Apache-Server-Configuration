@@ -3,53 +3,17 @@
 
 sudo apt update && sudo apt install apache2
 
-
 Configure Firewall
-
 
 sudo ufw allow OpenSSH
 
-
-
-
 sudo ufw allow in "Apache Full"
-
-
-
 
 sudo ufw enable
 
-
-
-
 sudo ufw status
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------
 
 Host Multiple Website on Droplets/Cloud Server/Any Ubuntu Linux
 
@@ -109,8 +73,6 @@ Renew SSL Useful Commands
 sudo apt-get update
 
 
-
-
 sudo apachectl stop
 
 
@@ -126,72 +88,26 @@ With WWW
 certbot renew --cert-name www.example.com 
 
 
-
-
 sudo service apache2 start
 
 
-
-
 service apache2 restart
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------
 Create Subdomain
-
 
 sudo apt-get update
 
-
 sudo mkdir -p /var/www/hi.example.com/public_html
-
 
 sudo chown -R $USER:$USER /var/www/hi.example.com/public_html
 
-
 sudo chmod -R 755 /var/www
-
-
 
 
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/hi.example.com.conf
 
 
-
-
 sudo nano /etc/apache2/sites-available/hi.example.com.conf
-
 
 
 
@@ -216,50 +132,31 @@ sudo nano /etc/apache2/sites-available/hi.example.com.conf
 
 
 
-
 sudo a2ensite hi.example.com.conf
-
-
-
 
 sudo service apache2 restart
 
-
-
-
-
-
+---------------------------------------------------------
 Install ZIP/Unzip
 
 
 apt-get update
 
 
-
-
 apt-get install zip unzip
 
-
+---------------------------------------------------------
 Enable .htaacess
 
 
 sudo apt-get update
 
 
-
-
 sudo a2enmod rewrite
-
-
-
 
 systemctl restart apache2
 
-
-
-
 sudo nano /etc/apache2/sites-enabled/000-default.conf
-
 
 
 
@@ -267,13 +164,11 @@ sudo nano /etc/apache2/sites-enabled/000-default.conf
   AllowOverride All
 </Directory>
 
-
+---------------------------------------------------------
 Configure Apache File
 
 
 sudo nano /etc/apache2/apache2.conf
-
-
 
 
 <Directory /var/www/>
@@ -284,29 +179,23 @@ sudo nano /etc/apache2/apache2.conf
 
 
 
-
  <Directory /var/www/html>
     Options -Indexes
  </Directory>
 
 
 
-
  ServerSignature Off
  ServerTokens Prod
 
-
+---------------------------------------------------------
 install SSL Certificate
 
 
 sudo apt update && sudo apt install certbot python3-certbot-apache
 
 
-
-
 sudo certbot --apache
-
-
 
 
 service apache2 restart
