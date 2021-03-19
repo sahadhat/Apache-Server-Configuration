@@ -43,7 +43,7 @@ ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-///Code
+<Code Start>
 
 <VirtualHost *:80>
 	
@@ -55,6 +55,8 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 </VirtualHost>
+
+</Code Close>
 
 sudo a2ensite example.com.conf
 
