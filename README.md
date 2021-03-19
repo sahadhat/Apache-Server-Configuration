@@ -173,7 +173,7 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
 
 `service apache2 restart`
 
-***Permission**
-
+#Permission
+------------------------------------------------------------------
 `sudo chown -R www-data:www-data /var/www`
 
