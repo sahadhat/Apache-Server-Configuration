@@ -176,5 +176,5 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
 #Permission
 ------------------------------------------------------------------
 `sudo chown -R www-data:www-data /var/www/html/`
-or
+[OR]
 sudo chown -R www-data:www-data /your-folder-name/
